@@ -1,10 +1,9 @@
-import { InputContainer } from './Input.styles'
+import { InputContainer } from './Input.styles';
 
-export default function Input() {
-
+export default function Input({value, onChange}) {
   return (
     <InputContainer>
-      <input />
+      <input value={value} onChange={onChange}/>
     </InputContainer>
-  )
+  );
 }

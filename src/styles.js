@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-
 export default createGlobalStyle`
   
   *, body {
@@ -12,4 +11,4 @@ export default createGlobalStyle`
     background-color: #22272E;
     color: #FFF;
   }
-`
+`;
