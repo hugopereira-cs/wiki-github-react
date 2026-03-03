@@ -13,5 +13,6 @@ export const Container = styled.div`
 `;
 export const ErrorMessage = styled.p`
   color: #ff6b6b;
-  font-size: 14px;
+  font-size: 16px;
+  margin-bottom: 10px;
 `;
