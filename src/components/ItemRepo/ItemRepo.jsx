@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { ItemContainer } from './ItemRepo.styles';
+import Button from '../Button/Button';
 
 export default function ItemRepo({ repo, handleRemoveRepo }) {
   const handleRemove = () => {
@@ -14,9 +15,14 @@ export default function ItemRepo({ repo, handleRemoveRepo }) {
         Ver repositório
       </a>
       <br />
-      <a href="#" rel="noreferrer" className="remover" onClick={(e) => { e.preventDefault(); handleRemove(); }}>
-        Remover
-      </a>
+      <Button
+        variant="danger"
+        label="Remover"
+        onClick={(e) => {
+          e.preventDefault();
+          handleRemove();
+        }}
+      />
       <hr />
     </ItemContainer>
   );
