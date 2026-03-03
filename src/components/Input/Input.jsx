@@ -1,4 +1,5 @@
 import { InputContainer } from './Input.styles';
+import PropTypes from 'prop-types';
 
 export default function Input({ value, onChange }) {
   return (
@@ -8,4 +9,7 @@ export default function Input({ value, onChange }) {
   );
 }
 
-// TODO: props validation
+Input.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
+};
