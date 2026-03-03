@@ -1,16 +1,66 @@
-# React + Vite
+# wiki-github-react
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web para buscar e gerenciar repositórios do GitHub, desenvolvida com React e Vite.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://react.dev/) ^19.2.0
+- [Vite](https://vite.dev/) ^7.3.1
+- [styled-components](https://styled-components.com/) ^6.3.11
+- [axios](https://axios-http.com/) ^1.13.6
 
-## React Compiler
+## 📋 Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Buscar repositórios pelo nome (ex: `usuario/repositorio`) via [API do GitHub](https://api.github.com)
+- Listar os repositórios encontrados
+- Evitar duplicatas na lista
+- Remover repositórios da lista
+- Exibir mensagens de erro para repositórios não encontrados ou já adicionados
 
-## Expanding the ESLint configuration
+## 🗂️ Estrutura do projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── assets/
+├── components/
+│   ├── Button/
+│   │   ├── Button.jsx
+│   │   └── Button.styles.js
+│   ├── Input/
+│   │   ├── Input.jsx
+│   │   └── Input.styles.js
+│   └── ItemRepo/
+│       ├── ItemRepo.jsx
+│       └── ItemRepo.styles.js
+├── pages/
+│   ├── App.jsx
+│   └── styles.js
+├── services/
+│   └── api.js
+├── main.jsx
+└── styles.js
+```
+
+## ⚙️ Como executar
+
+**Pré-requisitos:** Node.js `^20.19.0` ou `>=22.12.0`
+
+```bash
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
+npm run dev
+
+# Build para produção
+npm run build
+
+# Pré-visualizar o build
+npm run preview
+```
+
+## 🔍 Lint
+
+```bash
+npm run lint
+```
