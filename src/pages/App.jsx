@@ -13,19 +13,20 @@ export function App() {
 
   /* Conexão com a API usando o método get, e fazendo uso do camainho padrão presente em "api", passando somente o restante do endereço. */
   const handleSearchRepo = async () => {
-    const { data } = await api.get(`repos/${currentRepo}`);
-
-    /* Se "data" existe, concatena tudo com "data" */
-    if (data.id) {
-      const isExist = repos.find((repo) => repo.id === data.id);
-
-      if (!isExist) {
-        setRepos((prev) => [...prev, data]);
-        setCurrentRepo('');
-        return;
+    try {
+      const { data } = await api.get(`repos/${currentRepo}`);
+      /* Se "data" existe, concatena tudo com "data" */
+      if (data.id) {
+        const isExist = repos.find((repo) => repo.id === data.id);
+        if (!isExist) {
+          setRepos((prev) => [...prev, data]);
+          setCurrentRepo('');
+          return;
+        }
       }
+    } catch (error) {
+      alert('Repositório não encontrado!', error);
     }
-    alert('Repositório não encontrado!');
   };
 
   const handleRemoveRepo = (id) => {
