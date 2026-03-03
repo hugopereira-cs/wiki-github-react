@@ -11,3 +11,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
 `;
+export const ErrorMessage = styled.p`
+  color: #ff6b6b;
+  font-size: 14px;
+`;
