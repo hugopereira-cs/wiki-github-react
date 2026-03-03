@@ -7,3 +7,5 @@ export default function Input({ value, onChange }) {
     </InputContainer>
   );
 }
+
+// TODO: props validation

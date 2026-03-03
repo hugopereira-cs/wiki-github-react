@@ -29,7 +29,7 @@ const variants = {
 export const ButtonContainer = styled.button`
   border-radius: 20px;
   height: 62px;
-  width: 80%;
+  width: 40%;
   font-size: 20px;
   margin: 20px;
   cursor: pointer;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const ItemContainer = styled.div`
-  width: 80%;
+  width: 40%;
+  min-width: 200px;
 
   h3 {
     font-size: 32px;
